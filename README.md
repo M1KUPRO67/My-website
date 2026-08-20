@@ -1,5 +1,4 @@
-# My Website
+# leizy8499's F2U templates used !
 
-Just a little personal site :3
-
-Made with a template by leizy8499
+This is my website based on  leizy8499's template its a work in progess 
+Credit to the oringal creator:https://github.com/leizy8499/

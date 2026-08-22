@@ -1,35 +1,30 @@
 /* fonts go here */
-@font-face{
+@font-face {
     font-family: porkys;
     src: url('GREEN/assets/porkys.ttf');
 }
 
-@font-face{
-    font-family: ;
-    src: url('');
-}
-
 /* main container elements */
-body{
-    background: url(GREEN/assets/background.jpg);
-    background-size: cover;
-    background-repeat: repeat-y;
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: url('GREEN/assets/background.jpg') center top / cover repeat-y;
 }
 
-#container{
-    width: 1000px;
+#container {
+    width: min(1000px, calc(100% - 30px));
     margin: 90px auto;
     display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-rows: auto auto;
     grid-template-areas: 'directory main'
                          'misc main';
-    grid-column-gap: 15px;
+    gap: 15px;
     font-size: 1rem;
     font-family: serif;
 }
 
-.misc{
+.misc {
     grid-area: misc;
     padding: 10px;
     border: 10px solid white;
@@ -38,15 +33,16 @@ body{
     background: white;
 }
 
-.directory{
+.directory {
     grid-area: directory;
     border: 10px solid white;
     border-top-left-radius: 25px;
     font-size: 20px;
     background: white;
+    overflow: hidden;
 }
 
-.header{
+.header {
     text-align: center;
     padding: 10px;
     background: #c4df9b;
@@ -54,25 +50,25 @@ body{
     font-size: 20px;
     letter-spacing: 2px;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    border: 1px;
 }
 
-.link{
+.link {
     text-align: left;
-    padding: 3px;
-    padding-left: 15px;
+    padding: 3px 3px 3px 15px;
     background: linear-gradient(to bottom, #f7f7ec, #d2eab1);
     border: 1px solid #c4dca4;
-    height: 20px;
+    min-height: 20px;
     font-size: 18px;
+    box-sizing: border-box;
 }
 
-main{
+main {
     grid-area: main;
+    min-width: 0;
     padding: 20px;
     border: 1px dashed #f7f7ec;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 200px minmax(0, 1fr);
     grid-template-rows: 150px 50px 1fr;
     grid-template-areas: 'picture statuscafe'
                          'picture buttons'
@@ -82,22 +78,25 @@ main{
 
 /* "main" elements */
 
-.picture{
+.picture {
     grid-area: picture;
-    background-image: url(GREEN/assets/3dscartridge.jpg);
+    background-image: url('GREEN/assets/3dscartridge.jpg');
     background-size: cover;
+    background-position: center;
 }
 
-.statuscafe{
+.statuscafe {
     grid-area: statuscafe;
-    background-image: url(GREEN/assets/speechbubble.gif);
+    background-image: url('GREEN/assets/speechbubble.gif');
     background-size: 100% 100%;
+    background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: 300px 250px;
-    grid-template-areas: 'status update';
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'status';
+    min-width: 0;
 }
 
-.updates{
+.updates {
     grid-area: update;
     border: 1px solid #c4dca4;
     width: 210px;
@@ -105,35 +104,86 @@ main{
     height: 155px;
 }
 
-.buttons{
+.buttons {
     grid-area: buttons;
     padding: 15px;
+    min-width: 0;
+    overflow: hidden;
 }
 
-.sidebar{
+.sidebar {
     grid-area: sidebar;
-    background-color: #d2eab1;
     background: linear-gradient(to top right, #d2eab1, #d2eab1, #f7f7ec);
     border-radius: 10px;
     border: 1px dashed #f7f7ec;
     padding: 20px;
 }
 
-.content{
+.content {
     grid-area: content;
+    padding: 5px;
+    margin-left: 20px;
+    min-width: 0;
+}
+
+/* purely aesthetic-based things */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+li {
+    list-style-image: url('GREEN/assets/li.gif');
     padding: 5px;
     margin-left: 20px;
 }
 
-/* purely aesthetic-based things */
-a{text-decoration: none; color: black;}
-a:hover{font-style: italic;}
-
-li{list-style-image: url(GREEN/assets/li.gif); padding: 5px; margin-left: 20px;}
-
-.scrollbar-hide{
+.scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-textarea{width: 220px; height: 80px;}
+textarea {
+    width: 220px;
+    height: 80px;
+}
+
+@media (max-width: 760px) {
+    #container {
+        width: calc(100% - 20px);
+        margin: 20px auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'directory'
+            'main'
+            'misc';
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px auto 50px auto 1fr;
+        grid-template-areas:
+            'picture'
+            'statuscafe'
+            'buttons'
+            'sidebar'
+            'content';
+    }
+
+    .picture {
+        min-height: 150px;
+    }
+
+    .sidebar,
+    .content {
+        margin-left: 0;
+    }
+
+    .statuscafe {
+        min-height: 150px;
+    }
+}

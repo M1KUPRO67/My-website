@@ -3,5 +3,14 @@
 This is my website based on  leizy8499's template its a work in progess 
 Credit to the oringal creator:https://github.com/leizy8499/
 
-# This is my site this is still in progess but it is comeing nicely
-It has MUSIC
+# This is my homepadge online 
+
+-Features CURRENTLY
+Has link to my bluesky and myspace
+Has music 
+Has theme
+
+-Roadmap-
+Adding blog 
+Expanding the site
+Adding better features

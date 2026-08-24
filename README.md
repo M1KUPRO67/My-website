@@ -1,5 +1,6 @@
 # ADDED TO THE FRUTIGER AREO WEBRING
 
+This site contains music,part of webring and a good introduction when complerasted stilkl in devopment...
 # leizy8499's F2U templates used !
 
 This is my website based on  leizy8499's template its a work in progess 

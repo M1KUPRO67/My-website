@@ -9,7 +9,6 @@ Credit to the oringal creator:https://github.com/leizy8499/
 # This is my homepadge online 
 
 -Features CURRENTLY
-Has link to my bluesky and myspace
 Has music 
 Has theme
 

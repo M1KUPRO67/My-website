@@ -1,3 +1,7 @@
+# Site is sadly broken
+
+I am a bad devoper okay??
+
 # ADDED TO THE FRUTIGER AREO WEBRING
 
 This site contains music,part of webring and a good introduction when complerasted stilkl in devopment...

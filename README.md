@@ -1,6 +1,6 @@
-# Site is sadly broken
+# Site is NO LONGER  broken
 
-I am a bad devoper okay??
+I am a TOP SKBIDI  devoper CHARGED BY CLUB PENGUIN AURA  okay??
 
 # ADDED TO THE FRUTIGER AREO WEBRING
 
@@ -15,8 +15,8 @@ Credit to the oringal creator:https://github.com/leizy8499/
 -Features CURRENTLY
 Has music 
 Has theme
-
+Has About
 -Roadmap-
-Adding blog 
-Expanding the site
-Adding better features
+adding projects
+makeing it better 
+adding more rizz :3

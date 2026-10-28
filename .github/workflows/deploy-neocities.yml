@@ -15,12 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Build a clean folder containing only the actual website files.
-      # The Neocities deploy action should not receive the Git repository itself.
+      # Build a clean folder containing the actual website files.
+      # Include every page so the deployment doesn't silently omit about.html.
       - name: Prepare website files
         run: |
           mkdir -p _site
-          cp -a index.html style.css GREEN _site/
+          cp -a index.html about.html style.css GREEN _site/
 
       - name: Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v3

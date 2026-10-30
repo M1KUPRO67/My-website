@@ -4,6 +4,8 @@ I am a TOP SKBIDI  devoper CHARGED BY CLUB PENGUIN AURA  okay??
 
 I can use Photoshop (basically) :3
 
+#My socal medias
+
 # ADDED TO THE FRUTIGER AREO WEBRING
 
 This site contains music,part of webring and a good introduction when complerasted stilkl in devopment...

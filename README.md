@@ -15,5 +15,6 @@ Has theme
 Has About
 -Roadmap-
 adding projects
-makeing it better 
+~makeing it better~
+(its basicly almost finished)
 adding more rizz :3

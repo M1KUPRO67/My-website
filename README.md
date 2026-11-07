@@ -24,10 +24,13 @@ This uses leizy8499's template "green" it provided a very good base to work on.
 Template creator:https://github.com/leizy8499/
 To show the vibe futher it has not only a fruitger areo base but nightcore music to connote the vibe/era of 2007-2012 internet.
 
+# Compleated
+
+Added music
+Added homepadge
+Added about
+
 # The roadmap
--Add homepadge-
--Add music-
--Add about-
 Revamp home
 Project section
 Club Penguin shrine

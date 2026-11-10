@@ -15,6 +15,7 @@ This website is inlcuded in
 This website is included in the webing for fruitger areo sites this is important because its actually in a curation of fruitger areo
 SO this site is actually real
 
+
 # Intent of site
 
 This website,s puropose is to be a reflection of myself and my intrests its themed arround the early 2000s.
@@ -30,8 +31,14 @@ Added music
 Added homepadge
 Added about
 
+# What I added 
+I made about.html have a fun alert mesaage easter egg
+I have widened the main box
+I have made about and home have 2 diffrent CSS files
+
+
 # The roadmap
-Revamp home
+Revamp home-Current objective
 Project section
 Club Penguin shrine
 

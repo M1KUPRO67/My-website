@@ -1,0 +1,191 @@
+/* M1KUPRO67 homepage stylesheet — independent from about.css */
+
+/* fonts go here */
+@font-face {
+    font-family: porkys;
+    src: url('GREEN/assets/porkys.ttf');
+}
+
+/* main container elements */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: url('GREEN/assets/background.jpg') center top / cover repeat-y;
+}
+
+#container {
+    width: min(1200px, calc(100% - 30px));
+    margin: 90px auto;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: 'directory main'
+                         'misc main';
+    gap: 15px;
+    font-size: 1rem;
+    font-family: serif;
+}
+
+.misc {
+    grid-area: misc;
+    padding: 10px;
+    border: 10px solid white;
+    border-bottom-left-radius: 25px;
+    overflow: auto;
+    background: white;
+}
+
+.directory {
+    grid-area: directory;
+    border: 10px solid white;
+    border-top-left-radius: 25px;
+    font-size: 20px;
+    background: white;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    background: #c4df9b;
+    font-family: porkys;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.link {
+    text-align: left;
+    padding: 3px 3px 3px 15px;
+    background: linear-gradient(to bottom, #f7f7ec, #d2eab1);
+    border: 1px solid #c4dca4;
+    min-height: 20px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+main {
+    grid-area: main;
+    min-width: 0;
+    padding: 20px;
+    border: 1px dashed #f7f7ec;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-rows: 150px 50px 1fr;
+    grid-template-areas: 'picture statuscafe'
+                         'picture buttons'
+                         'sidebar content';
+    background: white;
+}
+
+/* "main" elements */
+.picture {
+    grid-area: picture;
+    background-image: url('GREEN/assets/3dscartridge.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.statuscafe {
+    grid-area: statuscafe;
+    background-image: url('GREEN/assets/speechbubble.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'status';
+    min-width: 0;
+}
+
+.updates {
+    grid-area: update;
+    border: 1px solid #c4dca4;
+    width: 210px;
+    margin: 0 auto;
+    height: 155px;
+}
+
+.buttons {
+    grid-area: buttons;
+    padding: 15px;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: linear-gradient(to top right, #d2eab1, #d2eab1, #f7f7ec);
+    border-radius: 10px;
+    border: 1px dashed #f7f7ec;
+    padding: 20px;
+}
+
+.content {
+    grid-area: content;
+    padding: 15px;
+    margin-left: 15px;
+    min-width: 0;
+    line-height: 1.5;
+}
+
+/* purely aesthetic-based things */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+li {
+    list-style-image: url('GREEN/assets/li.gif');
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+textarea {
+    width: 220px;
+    height: 80px;
+}
+
+@media (max-width: 760px) {
+    #container {
+        width: calc(100% - 20px);
+        margin: 20px auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'directory'
+            'main'
+            'misc';
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px auto 50px auto 1fr;
+        grid-template-areas:
+            'picture'
+            'statuscafe'
+            'buttons'
+            'sidebar'
+            'content';
+    }
+
+    .picture {
+        min-height: 150px;
+    }
+
+    .sidebar,
+    .content {
+        margin-left: 0;
+    }
+
+    .statuscafe {
+        min-height: 150px;
+    }
+}

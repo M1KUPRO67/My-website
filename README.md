@@ -3,18 +3,9 @@
 This is my website based HEAVLY on  leizy8499's template 
 Credit to the oringal creator:https://github.com/leizy8499/
 
-# Website indexed 
-This website is inlcuded in
-1.Neocities own index
-2.Google search(m1kupro67) gets seen as a typo but click search insted
-3.Bing/DDG
-4.Fruitger areo webring
+# In the fruitger areo webring
 
-# Included in the fruitger areo webring
-
-This website is included in the webing for fruitger areo sites this is important because its actually in a curation of fruitger areo
-SO this site is actually real
-
+The website is in the fruitger areo webring number 144!
 
 # Intent of site
 
@@ -28,18 +19,24 @@ To show the vibe futher it has not only a fruitger areo base but nightcore music
 # Compleated
 
 Added music
+
 Added homepadge
+
 Added about
 
 # What I added 
 I made about.html have a fun alert mesaage easter egg
+
 I have widened the main box
+
 I have made about and home have 2 diffrent CSS files
 
 
 # The roadmap
 Revamp home-Current objective
+
 Project section
+
 Club Penguin shrine
 
 # What I aim my site for 

@@ -1,0 +1,235 @@
+/* M1KUPRO67 site stylesheet
+   Kept self-contained so this file works independently on Neocities and GitHub Pages.
+*/
+
+@font-face {
+    font-family: "porkys";
+    src: url("./GREEN/assets/porkys.ttf") format("truetype");
+    font-display: swap;
+}
+
+/* Consistent sizing prevents padding and borders from unexpectedly widening grids. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: serif;
+    font-size: 1rem;
+    background-color: #d2eab1;
+    background-image: url("./GREEN/assets/background.jpg");
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+#container {
+    width: calc(100% - 30px);
+    max-width: 1200px;
+    margin: 90px auto;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-areas: "directory main";
+    gap: 15px;
+    align-items: start;
+}
+
+.directory {
+    grid-area: directory;
+    min-width: 0;
+    overflow: hidden;
+    border: 10px solid #fff;
+    border-top-left-radius: 25px;
+    background: #fff;
+    font-size: 20px;
+}
+
+.header {
+    padding: 10px;
+    background: #c4df9b;
+    font-family: "porkys", serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+.link {
+    min-height: 20px;
+    padding: 3px 3px 3px 15px;
+    border: 1px solid #c4dca4;
+    background: linear-gradient(to bottom, #f7f7ec, #d2eab1);
+    font-size: 18px;
+    text-align: left;
+}
+
+main {
+    grid-area: main;
+    min-width: 0;
+    padding: 20px;
+    border: 1px dashed #f7f7ec;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-rows: 150px 50px auto;
+    grid-template-areas:
+        "picture statuscafe"
+        "picture buttons"
+        "sidebar content";
+    background: #fff;
+}
+
+.picture {
+    grid-area: picture;
+    min-width: 0;
+    background-image: url("./GREEN/assets/3dscartridge.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.statuscafe {
+    grid-area: statuscafe;
+    min-width: 0;
+    max-width: 100%;
+    background-image: url("./GREEN/assets/speechbubble.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "status";
+}
+
+.status {
+    grid-area: status;
+    min-width: 0;
+}
+
+.updates {
+    grid-area: update;
+    width: 210px;
+    max-width: 100%;
+    height: 155px;
+    margin: 0 auto;
+    border: 1px solid #c4dca4;
+}
+
+.buttons {
+    grid-area: buttons;
+    min-width: 0;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    min-width: 0;
+    padding: 20px;
+    border: 1px dashed #f7f7ec;
+    border-radius: 10px;
+    background: linear-gradient(to top right, #d2eab1, #d2eab1, #f7f7ec);
+}
+
+.content {
+    grid-area: content;
+    min-width: 0;
+    margin-left: 15px;
+    padding: 15px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+li {
+    margin-left: 20px;
+    padding: 5px;
+    list-style-image: url("./GREEN/assets/li.gif");
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+textarea {
+    width: 220px;
+    max-width: 100%;
+    height: 80px;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+@media (max-width: 760px) {
+    #container {
+        width: calc(100% - 20px);
+        margin: 20px auto;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "directory"
+            "main";
+        gap: 12px;
+    }
+
+    main {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: 150px auto auto auto auto;
+        grid-template-areas:
+            "picture"
+            "statuscafe"
+            "buttons"
+            "sidebar"
+            "content";
+        padding: 15px;
+    }
+
+    .picture {
+        min-height: 150px;
+    }
+
+    .statuscafe {
+        min-height: 150px;
+        width: 100%;
+    }
+
+    .sidebar,
+    .content {
+        margin-left: 0;
+    }
+
+    .content {
+        padding: 12px 5px;
+    }
+}
+
+@media (max-width: 380px) {
+    #container {
+        width: calc(100% - 12px);
+        margin: 12px auto;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .directory {
+        border-width: 6px;
+    }
+}

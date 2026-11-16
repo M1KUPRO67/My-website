@@ -73,8 +73,8 @@ main {
     min-height: 75vh;
     border: 1px dashed #f7f7ec;
     display: grid;
-    grid-template-columns: 230px minmax(0, 1fr);
-    grid-template-rows: 170px 55px minmax(450px, 1fr);
+    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-rows: 150px 50px minmax(450px, 1fr);
     grid-template-areas: 'picture statuscafe'
                          'picture buttons'
                          'sidebar content';
@@ -85,6 +85,8 @@ main {
 
 .picture {
     grid-area: picture;
+    width: 200px;
+    height: 200px;
     background-image: url('GREEN/assets/3dscartridge.jpg');
     background-size: cover;
     background-position: center;
@@ -92,6 +94,10 @@ main {
 
 .statuscafe {
     grid-area: statuscafe;
+    width: 300px;
+    max-width: 100%;
+    height: 150px;
+    align-self: start;
     background-image: url('GREEN/assets/speechbubble.gif');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -170,7 +176,7 @@ textarea {
 
     main {
         grid-template-columns: 1fr;
-        grid-template-rows: 150px auto 50px auto 1fr;
+        grid-template-rows: 200px 150px 50px auto 1fr;
         grid-template-areas:
             'picture'
             'statuscafe'
@@ -180,7 +186,7 @@ textarea {
     }
 
     .picture {
-        min-height: 150px;
+        min-height: 0;
     }
 
     .sidebar,
@@ -205,10 +211,10 @@ textarea {
 #aero-ring img { max-width: 100%; height: auto; }
 
 @media (max-width: 760px) {
-    main { padding: 14px; grid-template-rows: 170px auto 55px auto auto; }
+    main { padding: 14px; grid-template-rows: 200px 150px 50px auto auto; }
     .content { margin-left: 0; }
     .sidebar { padding: 16px; }
-    .statuscafe { width: 100% !important; max-width: 360px; }
+    .statuscafe { width: 300px; max-width: 100%; }
     .buttons { padding: 12px 0; }
     #aero-ring, #aero-ring-noscript { max-width: 190px; }
 }
